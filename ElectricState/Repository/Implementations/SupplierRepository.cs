@@ -57,6 +57,11 @@ namespace ElectricState.Repository.Implementations
             throw new NotImplementedException();
         }
 
+        public Task<Supplier> SearchSupplier(string name)
+        {
+            throw new NotImplementedException();
+        }
+
         public async Task<bool> SupplierExistsAsync(string name)
         {
           return  await _context.Suppliers.AnyAsync(s =>s.SupplierName == name);
