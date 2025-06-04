@@ -11,5 +11,7 @@ namespace ElectricState.Repository.Interfaces
         Task<bool> DeleteSupplierAsync(int id);
 
         Task<bool> SupplierExistsAsync(string name );
+
+        Task<Supplier> SearchSupplier(string name);
     }
 }
