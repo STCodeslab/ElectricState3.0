@@ -32,3 +32,9 @@ steps:
   inputs:
     platform: '$(buildPlatform)'
     configuration: '$(buildConfiguration)'
+
+- task: AzureWebApp@1
+  inputs:
+    azureSubscription: 'MyAzureConnection'     
+    appName: 'ElectricState'                  
+    package: '$(build.artifactStagingDirectory)/WebApp.zip'
