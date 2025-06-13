@@ -5,6 +5,7 @@ using ElectricState.Repository.Interfaces;
 using ElectricState.Services.Implementations;
 using ElectricState.Services.Interfaces;
 using Microsoft.EntityFrameworkCore;
+using System.Configuration;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -14,6 +15,8 @@ builder.Services.AddControllersWithViews();
 builder.Services.AddDbContext<ElectricDbContext>(options =>
 
 options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
+
+
 
 
 //Services 
